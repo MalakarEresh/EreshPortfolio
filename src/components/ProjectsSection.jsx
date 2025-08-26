@@ -36,7 +36,7 @@ const projects = [
       "TensorFlow",
     ],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/MalakarEresh/Parkinson-Detection-",
   },
 ]
 
