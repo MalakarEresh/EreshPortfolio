@@ -7,6 +7,7 @@ import { SkillsSection } from "../components/SkillsSection"
 import { ProjectsSection } from "../components/ProjectsSection"
 import { ContactSection } from "../components/ContactSection"
 import { Footer } from "../components/Footer"
+import { N8nChatBot } from "../components/N8nChatBot" // New import
 
 export const Home = () => {
   return (
@@ -15,7 +16,6 @@ export const Home = () => {
       <ThemeToggle />
       {/* Background Effects */}
       {/* <StarBackground /> */}
-
       {/* Navbar */}
       <Navbar />
       {/* Main Content */}
@@ -26,9 +26,9 @@ export const Home = () => {
         <ProjectsSection />
         <ContactSection />
       </main>
-
       {/* Footer */}
       <Footer />
+      <N8nChatBot /> {/* Add chat bot component here */}
     </div>
   )
 }
