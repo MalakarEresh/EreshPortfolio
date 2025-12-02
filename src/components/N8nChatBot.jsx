@@ -8,7 +8,7 @@ export const N8nChatBot = () => {
   useEffect(() => {
     createChat({
       webhookUrl:
-        "https://mytestdemo05.app.n8n.cloud/webhook/35cf6926-f272-41e6-ae48-3baba9e4be76/chat",
+        "https://mytestdemo.app.n8n.cloud/webhook/35cf6926-f272-41e6-ae48-3baba9e4be76/chat",
 
       // Try these simpler options first
       mode: "window",
