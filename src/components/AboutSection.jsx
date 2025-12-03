@@ -16,13 +16,13 @@ export const AboutSection = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">Who Am I?</h3>
 
-            <p className="text-muted-foreground">
+            <p className="text-justify text-muted-foreground">
               I'm a passionate and motivated CSIT student with a strong
               foundation in computer science. I have excellent problem-solving
               skills and a keen interest in technology and software development.
             </p>
 
-            <p className="text-muted-foreground">
+            <p className="text-justify text-muted-foreground">
               My academic projects have allowed me to hone my coding abilities,
               teamwork, and project management skills. I'm always eager to learn
               and contribute in any role that challenges me and helps me grow.

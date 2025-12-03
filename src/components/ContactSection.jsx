@@ -81,7 +81,7 @@ export const ContactSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Contact Info */}
-          <div className="space-y-8">
+          <div className="p-10 space-y-8">
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
 
             <div className="space-y-6 justify-center">
@@ -159,7 +159,7 @@ export const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-card p-8 rounded-lg shadow-xs">
+          <div className="bg-card p-7 rounded-lg shadow-xs">
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
             <form
@@ -169,7 +169,7 @@ export const ContactSection = () => {
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium mb-2"
+                  className="mx-3 text-left block text-sm font-medium mb-3"
                 >
                   Your Name
                 </label>
@@ -188,7 +188,7 @@ export const ContactSection = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium mb-2"
+                  className="mx-3 text-left block text-sm font-medium mb-2"
                 >
                   Your Email
                 </label>
@@ -207,7 +207,7 @@ export const ContactSection = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium mb-2"
+                  className="mx-3 text-left block text-sm font-medium mb-2"
                 >
                   Your Message
                 </label>
