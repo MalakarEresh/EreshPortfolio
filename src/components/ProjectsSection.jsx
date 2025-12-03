@@ -1,24 +1,25 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react"
 
 const projects = [
+  
   {
     id: 1,
+    title: "Document RAG Implementation",
+    description:
+      "A RAG implementation using Google Gemini 2.5-pro model for conversation and Huggingface embedding model for vector-embedding.",
+    image: "/projects/project4.png",
+    tags: ["Python", "FastAPI", "Langchain", "HuggingFace", "Gemini", "React"],
+    demoUrl: "https://github.com/MalakarEresh/DocumentRAG",
+    githubUrl: "https://github.com/MalakarEresh/DocumentRAG",
+  },
+  {
+    id: 2,
     title: "Ecommerce Project",
     description: "An ecommerce platform with shopping cart functionality.",
     image: "/projects/project1.png",
     tags: ["React", "TailwindCSS", "MongoDB"],
     demoUrl: "https://my-ecommercefrontend.vercel.app/",
     githubUrl: "https://github.com/MalakarEresh/MyEcommerce",
-  },
-  {
-    id: 2,
-    title: "Flask To-do list App",
-    description:
-      "A to-do list application with user authentication and CRUD operations.",
-    image: "/projects/project2.png",
-    tags: ["Python", "Flask", "SQLite", "Bootstrap"],
-    demoUrl: "https://flask-todo-app-jk0m.onrender.com/",
-    githubUrl: "https://github.com/MalakarEresh/Flask_Todo_app",
   },
   {
     id: 3,
@@ -35,9 +36,21 @@ const projects = [
       "Bootstrap",
       "TensorFlow",
     ],
-    demoUrl: "#",
+    demoUrl: "https://github.com/MalakarEresh/Parkinson-Detection-",
     githubUrl: "https://github.com/MalakarEresh/Parkinson-Detection-",
   },
+  {
+    id: 4,
+    title: "Flask To-do list App",
+    description:
+      "A to-do list application with user authentication and CRUD operations.",
+    image: "/projects/project2.png",
+    tags: ["Python", "Flask", "SQLite", "Bootstrap"],
+    demoUrl: "https://flask-todo-app-jk0m.onrender.com/",
+    githubUrl: "https://github.com/MalakarEresh/Flask_Todo_app",
+  },
+  
+  
 ]
 
 export const ProjectsSection = () => {
