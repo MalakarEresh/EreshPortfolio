@@ -8,7 +8,6 @@ import {
   Twitch,
   Twitter,
 } from "lucide-react"
-import { cn } from "@/lib/utils"
 import { useToast } from "@/hooks/use-toast"
 import { useState } from "react"
 import emailjs from "@emailjs/browser"
@@ -81,12 +80,12 @@ export const ContactSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Contact Info */}
-          <div className="p-10 space-y-8">
+          <div className="bg-card p-7 md:p-8 rounded-xl border border-border/60 shadow-xs space-y-8 text-left">
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
 
-            <div className="space-y-6 justify-center">
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
+            <div className="space-y-4">
+              <div className="flex items-start space-x-4 rounded-lg p-3 hover:bg-secondary/50 transition-colors">
+                <div className="p-3 rounded-full bg-primary/10 shrink-0">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
@@ -99,8 +98,8 @@ export const ContactSection = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
+              <div className="flex items-start space-x-4 rounded-lg p-3 hover:bg-secondary/50 transition-colors">
+                <div className="p-3 rounded-full bg-primary/10 shrink-0">
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div>
@@ -113,44 +112,56 @@ export const ContactSection = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
+              <div className="flex items-start space-x-4 rounded-lg p-3 hover:bg-secondary/50 transition-colors">
+                <div className="p-3 rounded-full bg-primary/10 shrink-0">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-medium">Location</h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
+                  <p className="text-muted-foreground">
                     Samakhusi, Kathmandu Nepal
-                  </a>
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Socials */}
-            <div className="pt-8">
+            <div className="pt-4">
               <h4 className="font-medium mb-4">Connect With Me</h4>
-              <div className="flex space-x-4 justify-center">
+              <div className="flex flex-wrap gap-3">
                 <a
                   href="https://www.linkedin.com/in/eresh-man-malakar-8a000331b/"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="p-2.5 rounded-full border border-border bg-background/70 text-muted-foreground hover:border-primary hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-200"
                 >
                   <Linkedin />
                 </a>
                 <a
                   href="https://x.com/Genos66247529"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitter"
+                  className="p-2.5 rounded-full border border-border bg-background/70 text-muted-foreground hover:border-primary hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-200"
                 >
                   <Twitter />
                 </a>
                 <a
                   href="#"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="p-2.5 rounded-full border border-border bg-background/70 text-muted-foreground hover:border-primary hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-200"
                 >
                   <Instagram />
                 </a>
                 <a
                   href="#"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitch"
+                  className="p-2.5 rounded-full border border-border bg-background/70 text-muted-foreground hover:border-primary hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-200"
                 >
                   <Twitch />
                 </a>
@@ -159,8 +170,11 @@ export const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-card p-7 rounded-lg shadow-xs">
+          <div className="bg-card p-7 md:p-8 rounded-xl border border-border/60 shadow-xs text-left">
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
+            <p className="text-sm text-muted-foreground mb-6">
+              Fill out the form and I’ll get back to you as soon as possible.
+            </p>
 
             <form
               onSubmit={handleSubmit}
@@ -169,7 +183,7 @@ export const ContactSection = () => {
               <div>
                 <label
                   htmlFor="name"
-                  className="mx-3 text-left block text-sm font-medium mb-3"
+                  className="block text-sm font-medium mb-2"
                 >
                   Your Name
                 </label>
@@ -180,7 +194,7 @@ export const ContactSection = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary transition-colors"
                   placeholder="Your Name Here"
                 />
               </div>
@@ -188,7 +202,7 @@ export const ContactSection = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="mx-3 text-left block text-sm font-medium mb-2"
+                  className="block text-sm font-medium mb-2"
                 >
                   Your Email
                 </label>
@@ -199,7 +213,7 @@ export const ContactSection = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary transition-colors"
                   placeholder="Your Email Here"
                 />
               </div>
@@ -207,7 +221,7 @@ export const ContactSection = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="mx-3 text-left block text-sm font-medium mb-2"
+                  className="block text-sm font-medium mb-2"
                 >
                   Your Message
                 </label>
@@ -216,8 +230,9 @@ export const ContactSection = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
+                  rows={5}
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none transition-colors"
                   placeholder="Type your message here..."
                 />
               </div>
@@ -225,9 +240,7 @@ export const ContactSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
-                )}
+                className="cosmic-button w-full flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
                 <Send size={16} />
