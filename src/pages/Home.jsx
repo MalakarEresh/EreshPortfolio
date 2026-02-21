@@ -9,7 +9,7 @@ import { ExperienceSection } from "../components/ExperienceSection"
 import { ProjectsSection } from "../components/ProjectsSection"
 import { ContactSection } from "../components/ContactSection"
 import { Footer } from "../components/Footer"
-import { N8nChatBot } from "../components/N8nChatBot" // New import
+import { PortfolioChatWidget } from "../components/PortfolioChatWidget"
 
 export const Home = () => {
   return (
@@ -32,7 +32,7 @@ export const Home = () => {
       </main>
       {/* Footer */}
       <Footer />
-      {/* <N8nChatBot /> */}
+      <PortfolioChatWidget />
     </div>
   )
 }
