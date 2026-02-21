@@ -32,7 +32,7 @@ export const Home = () => {
       </main>
       {/* Footer */}
       <Footer />
-      <N8nChatBot /> {/* Add chat bot component here */}
+      {/* <N8nChatBot /> */}
     </div>
   )
 }

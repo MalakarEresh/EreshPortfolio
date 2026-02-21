@@ -2,63 +2,40 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 // SVG Icons (Vite requires `?react`)
-import { ReactComponent as PlaywrightIcon } from "@/icons/playwright.svg?react";
-import { ReactComponent as SeleniumIcon } from "@/icons/selenium.svg?react";
-import { ReactComponent as CypressIcon } from "@/icons/cypress.svg?react";
-
-import { ReactComponent as PostmanIcon } from "@/icons/postman.svg?react";
-import { ReactComponent as InsomniaIcon } from "@/icons/insomnia.svg?react";
-
-import { ReactComponent as BurpIcon } from "@/icons/burp.svg?react";
-
-import { ReactComponent as ManualTestIcon } from "@/icons/manual.svg?react";
-import { ReactComponent as RegressionIcon } from "@/icons/regression.svg?react";
+import { ReactComponent as HtmlIcon } from "@/icons/html.svg?react";
+import { ReactComponent as JsIcon } from "@/icons/js.svg?react";
+import { ReactComponent as ReactIcon } from "@/icons/react.svg?react";
 
 import { ReactComponent as PythonIcon } from "@/icons/python.svg?react";
+import { ReactComponent as FastapiIcon } from "@/icons/fastapi.svg?react";
+import { ReactComponent as DjangoIcon } from "@/icons/django.svg?react";
+import { ReactComponent as SqliteIcon } from "@/icons/sqlite.svg?react";
+import { ReactComponent as MysqlIcon } from "@/icons/mysql.svg?react";
+import { ReactComponent as PostgresIcon } from "@/icons/postgres.svg?react";
 
 import { ReactComponent as N8nIcon } from "@/icons/n8n.svg?react";
 import { ReactComponent as GitIcon } from "@/icons/git.svg?react";
-import { ReactComponent as JenkinsIcon } from "@/icons/jenkins.svg?react";
+import { ReactComponent as PostmanIcon } from "@/icons/postman.svg?react";
 
 // Skills list
 const skills = [
-  // Test Automation
-  { name: "Playwright", level: 85, category: "automation", Icon: PlaywrightIcon },
-  { name: "Selenium", level: 80, category: "automation", Icon: SeleniumIcon },
-  { name: "Cypress", level: 80, category: "automation", Icon: CypressIcon },
+  { name: "HTML/CSS", level: 95, category: "frontend", Icon: HtmlIcon },
+  { name: "JavaScript", level: 70, category: "frontend", Icon: JsIcon },
+  { name: "React", level: 60, category: "frontend", Icon: ReactIcon },
 
-  // API Testing Tools
-  { name: "Postman", level: 85, category: "api", Icon: PostmanIcon },
-  { name: "Insomnia", level: 80, category: "api", Icon: InsomniaIcon },
+  { name: "Python", level: 85, category: "backend", Icon: PythonIcon },
+  { name: "FastAPI", level: 75, category: "backend", Icon: FastapiIcon },
+  { name: "Django", level: 75, category: "backend", Icon: DjangoIcon },
+  { name: "SQLite", level: 80, category: "backend", Icon: SqliteIcon },
+  { name: "MySQL", level: 75, category: "backend", Icon: MysqlIcon },
+  { name: "PostgreSQL", level: 75, category: "backend", Icon: PostgresIcon },
 
-  // Security Testing
-  { name: "Burp Suite", level: 75, category: "security", Icon: BurpIcon },
-
-  // Manual Testing
-  { name: "Manual Testing", level: 90, category: "testing", Icon: ManualTestIcon },
-  { name: "Regression Testing", level: 85, category: "testing", Icon: RegressionIcon },
-
-  // Programming (for automation)
-  { name: "Python", level: 85, category: "programming", Icon: PythonIcon },
-
-  // AI & Workflow Automation
-  { name: "n8n", level: 85, category: "ai", Icon: N8nIcon },
-
-  // CI/CD & Version Control
-  { name: "Git/GitHub", level: 90, category: "cicd", Icon: GitIcon },
-  { name: "Jenkins", level: 75, category: "cicd", Icon: JenkinsIcon },
+  { name: "n8n", level: 90, category: "tools", Icon: N8nIcon },
+  { name: "Git/GitHub", level: 90, category: "tools", Icon: GitIcon },
+  { name: "Postman", level: 70, category: "tools", Icon: PostmanIcon },
 ];
 
-const categories = [
-  { value: "all", label: "All" },
-  { value: "automation", label: "Automation" },
-  { value: "api", label: "API" },
-  { value: "security", label: "Security" },
-  { value: "testing", label: "Testing" },
-  { value: "programming", label: "Programming" },
-  { value: "ai", label: "AI" },
-  { value: "cicd", label: "CI/CD" },
-];
+const categories = ["all", "frontend", "backend", "tools"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -80,15 +57,15 @@ export const SkillsSection = () => {
           {categories.map((category, key) => (
             <button
               key={key}
-              onClick={() => setActiveCategory(category.value)}
+              onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300",
-                activeCategory === category.value
+                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
+                activeCategory === category
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary/70 text-foreground hover:bg-secondary"
               )}
             >
-              {category.label}
+              {category}
             </button>
           ))}
         </div>
