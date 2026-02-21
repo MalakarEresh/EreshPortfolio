@@ -53,7 +53,7 @@ export const ContactSection = () => {
           setFormData({ name: "", email: "", message: "" }) // reset form
           setIsSubmitting(false)
         },
-        (error) => {
+        () => {
           toast({
             title: "Error 😢",
             description: "Something went wrong. Please try again later.",
@@ -75,7 +75,7 @@ export const ContactSection = () => {
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
           Have a project in mind or want to collaborate? Feel free to reach out.
-          I'm always open to discussing new opportunities.
+          I&apos;m always open to discussing new opportunities.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -173,7 +173,7 @@ export const ContactSection = () => {
           <div className="bg-card p-7 md:p-8 rounded-xl border border-border/60 shadow-xs text-left">
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
             <p className="text-sm text-muted-foreground mb-6">
-              Fill out the form and I’ll get back to you as soon as possible.
+              Fill out the form and I&apos;ll get back to you as soon as possible.
             </p>
 
             <form
